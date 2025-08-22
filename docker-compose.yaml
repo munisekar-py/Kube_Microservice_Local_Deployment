@@ -1,0 +1,41 @@
+
+services:
+  user-service:
+    build: ./user-service
+    image: 975050024946.dkr.ecr.us-west-2.amazonaws.com/muni-services/user-service:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+
+  product-service:
+    build: ./product-service
+    image: 975050024946.dkr.ecr.us-west-2.amazonaws.com/muni-services/product-service:latest
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+
+  order-service:
+    build: ./order-service
+    image: 975050024946.dkr.ecr.us-west-2.amazonaws.com/muni-services/order-service:latest
+    ports:
+      - "3002:3002"
+    environment:
+      - PORT=3002
+
+  gateway-service:
+    build: ./gateway-service
+    image: 975050024946.dkr.ecr.us-west-2.amazonaws.com/muni-services/gateway-service:latest
+    ports:
+      - "3003:3003"
+    environment:
+      - PORT=3003
+      - USER_SERVICE_URL=http://user-service:3000
+      - PRODUCT_SERVICE_URL=http://product-service:3001
+      - ORDER_SERVICE_URL=http://order-service:3002
+    depends_on:
+      - order-service
+      - user-service
+      - product-service
+
