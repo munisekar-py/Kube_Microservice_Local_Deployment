@@ -103,3 +103,18 @@ user-service      1/1     1            1           33m
 ---
 
 <img width="308" height="262" alt="image" src="https://github.com/user-attachments/assets/c87a8f4a-7a73-4170-809f-0d3cb8bdd39b" />
+
+**Successfullty Deleted Deployments**
+
+**⚡munish ❯❯ kubectl delete -f k8s/**
+```
+deployment.apps "gateway-service" deleted
+service "gateway-service" deleted
+deployment.apps "order-service" deleted
+service "order-service" deleted
+deployment.apps "product-service" deleted
+service "product-service" deleted
+deployment.apps "user-service" deleted
+service "user-service" deleted
+
+```
