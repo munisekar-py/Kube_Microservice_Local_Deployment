@@ -35,6 +35,12 @@ CURRENT   NAME             CLUSTER          AUTHINFO         NAMESPACE
 *         docker-desktop   docker-desktop   docker-desktop   
 
 ```
+**Docker Images are build and pushed to AWS/ECS repository**
+
+<img width="1513" height="200" alt="image" src="https://github.com/user-attachments/assets/4dd567f2-6ba4-426f-9a85-9afa9f01e996" />
+
+
+
 ---
 ### Basic Kubernetes Deployment 
 **munish:  kubectl apply -f k8s/**
