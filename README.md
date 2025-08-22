@@ -30,9 +30,9 @@ It includes the following services:
 ---
 
 
+
+**munish:  kubectl apply -f k8s/**
 ```
- ⚡munish ❯❯ kubectl apply -f k8s/
- 
 deployment.apps/gateway-service created
 service/gateway-service created
 deployment.apps/order-service created
@@ -52,3 +52,12 @@ service/user-service created
 
 
 <img width="881" height="197" alt="image" src="https://github.com/user-attachments/assets/d7fed941-9c88-4842-8377-d4b499076d60" />
+
+
+
+⚡munish ❯❯ curl http://localhost:30083/api/users
+[{"id":1,"name":"John Doe"},{"id":2,"name":"Jane Smith"}]
+
+ ⚡munish ❯❯ curl http://localhost:30083/api/products
+[{"id":1,"name":"Laptop","price":999},{"id":2,"name":"Phone","price":699}]
+
